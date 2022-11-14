@@ -17,6 +17,19 @@
 // и выдаёт номер строки с наименьшей суммой элементов: 1 строка
 
 
+// Заполнение массива рандомными числами от 1 до 9
+
+void CreateMatrixRndInt(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = new Random().Next(1, 10);
+        }
+    }
+}
+
 // Вывод двумерного массива
 
 void PrintMatrix(int[,] array)
@@ -29,19 +42,6 @@ void PrintMatrix(int[,] array)
             Console.Write($"{array[i, j]} ");
         }
         Console.WriteLine();
-    }
-}
-
-// Заполнение массива рандомными числами от 1 до 9
-
-void CreateMatrixRndInt(int[,] array)
-{
-    for (int i = 0; i < array.GetLength(0); i++)
-    {
-        for (int j = 0; j < array.GetLength(1); j++)
-        {
-            array[i, j] = new Random().Next(1, 10);
-        }
     }
 }
 
